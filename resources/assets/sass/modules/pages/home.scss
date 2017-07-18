@@ -1,0 +1,38 @@
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  color: #fff;
+}
+.is-dark {
+  background-color: #cd05ff;
+  background-image: linear-gradient(rgba(73,155,234,0.6),rgba(205,5,255,0.6)),linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('/../images/support_screen.jpg');
+}
+.nav {
+  padding: 20px 0;
+  &.top-nav {
+    min-height: 80px;
+  }
+}
+
+
+.hero.is-dark .nav-item a:not(.button), .hero.is-dark a.nav-item {
+  color: #fff;
+  padding: 0 30px;
+}
+.nav-item {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+.nav-item .button{
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  height: 45px;
+}
+.promo-img {
+  border-radius: 10px;
+  border: 10px solid lighten(#6f1a9b, 30);
+}
