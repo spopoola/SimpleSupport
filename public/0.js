@@ -14,7 +14,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
  // With moment.js
 
-var types = ['line', 'bar', 'radar', 'polarArea', 'pie', 'doughnut'];
+var types = ['line', 'bar', 'radar', 'polarArea', 'pie', 'doughnut', 'bubble'];
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 
@@ -11983,7 +11983,7 @@ for (var name in colorNames) {
 /***/ (function(module, exports, __webpack_require__) {
 
 /* MIT license */
-var convert = __webpack_require__("./node_modules/chartjs-color/node_modules/color-convert/index.js");
+var convert = __webpack_require__("./node_modules/color-convert/index.js");
 var string = __webpack_require__("./node_modules/chartjs-color-string/color-string.js");
 
 var Color = function (obj) {
@@ -12471,7 +12471,7 @@ module.exports = Color;
 
 /***/ }),
 
-/***/ "./node_modules/chartjs-color/node_modules/color-convert/conversions.js":
+/***/ "./node_modules/color-convert/conversions.js":
 /***/ (function(module, exports) {
 
 /* MIT license */
@@ -13176,10 +13176,10 @@ for (var key in cssKeywords) {
 
 /***/ }),
 
-/***/ "./node_modules/chartjs-color/node_modules/color-convert/index.js":
+/***/ "./node_modules/color-convert/index.js":
 /***/ (function(module, exports, __webpack_require__) {
 
-var conversions = __webpack_require__("./node_modules/chartjs-color/node_modules/color-convert/conversions.js");
+var conversions = __webpack_require__("./node_modules/color-convert/conversions.js");
 
 var convert = function() {
    return new Converter();
@@ -29388,7 +29388,7 @@ var Component = __webpack_require__("./node_modules/vue-loader/lib/component-nor
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/RickBolton/Sites/SimpleSupport/node_modules/vue-bulma-chartjs/src/Chartjs.vue"
+Component.options.__file = "/Users/steve/devapps/sites/SimpleSupport/node_modules/vue-bulma-chartjs/src/Chartjs.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Chartjs.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -30543,7 +30543,7 @@ var Component = __webpack_require__("./node_modules/vue-loader/lib/component-nor
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/RickBolton/Sites/SimpleSupport/resources/assets/js/components/users/AvatarUpload.vue"
+Component.options.__file = "/Users/steve/devapps/sites/SimpleSupport/resources/assets/js/components/users/AvatarUpload.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] AvatarUpload.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -30584,7 +30584,7 @@ var Component = __webpack_require__("./node_modules/vue-loader/lib/component-nor
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/RickBolton/Sites/SimpleSupport/resources/assets/js/components/users/UserModal.vue"
+Component.options.__file = "/Users/steve/devapps/sites/SimpleSupport/resources/assets/js/components/users/UserModal.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] UserModal.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -30625,7 +30625,7 @@ var Component = __webpack_require__("./node_modules/vue-loader/lib/component-nor
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/RickBolton/Sites/SimpleSupport/resources/assets/js/components/users/UserRow.vue"
+Component.options.__file = "/Users/steve/devapps/sites/SimpleSupport/resources/assets/js/components/users/UserRow.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] UserRow.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -30666,7 +30666,7 @@ var Component = __webpack_require__("./node_modules/vue-loader/lib/component-nor
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/RickBolton/Sites/SimpleSupport/resources/assets/js/components/users/UserSelect.vue"
+Component.options.__file = "/Users/steve/devapps/sites/SimpleSupport/resources/assets/js/components/users/UserSelect.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] UserSelect.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -30707,7 +30707,7 @@ var Component = __webpack_require__("./node_modules/vue-loader/lib/component-nor
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/RickBolton/Sites/SimpleSupport/resources/assets/js/components/users/UsersList.vue"
+Component.options.__file = "/Users/steve/devapps/sites/SimpleSupport/resources/assets/js/components/users/UsersList.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] UsersList.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -31128,7 +31128,7 @@ var Component = __webpack_require__("./node_modules/vue-loader/lib/component-nor
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/RickBolton/Sites/SimpleSupport/resources/assets/js/views/dashboard/index.vue"
+Component.options.__file = "/Users/steve/devapps/sites/SimpleSupport/resources/assets/js/views/dashboard/index.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] index.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -31169,7 +31169,7 @@ var Component = __webpack_require__("./node_modules/vue-loader/lib/component-nor
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/RickBolton/Sites/SimpleSupport/resources/assets/js/views/users/Profile.vue"
+Component.options.__file = "/Users/steve/devapps/sites/SimpleSupport/resources/assets/js/views/users/Profile.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Profile.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -31210,7 +31210,7 @@ var Component = __webpack_require__("./node_modules/vue-loader/lib/component-nor
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/RickBolton/Sites/SimpleSupport/resources/assets/js/views/users/index.vue"
+Component.options.__file = "/Users/steve/devapps/sites/SimpleSupport/resources/assets/js/views/users/index.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] index.vue: functional components are not supported with templates, they should use render functions.")}
 

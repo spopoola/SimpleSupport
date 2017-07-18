@@ -882,6 +882,10 @@ body.stop-scrolling {
     transform: translateY(145%); } }
 @charset "UTF-8";
 
+.is-primary {
+  background: #325e90;
+}
+
 /*! bulma.io v0.4.2 | MIT License | github.com/jgthms/bulma */
 
 @-webkit-keyframes spinAround {
