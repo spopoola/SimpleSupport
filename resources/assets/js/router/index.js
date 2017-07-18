@@ -1,13 +1,36 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import { routes as routes } from '../app/index'
-
+import menuModule from '../store/modules/menu'
 
 Vue.use(Router)
 
-const router = new Router({
-    routes: routes
+export default new Router({
+  linkActiveClass: 'is-active',
+  scrollBehavior: () => ({ y: 0 }),
+  routes: [
+    {
+      name: 'login',
+      path: '/login',
+      component: require('../views/auth/Login')
+    },
+    ...generateRoutesFromMenu(menuModule.state.items),
+    {
+      path: '*',
+      redirect: '/'
+    }
+  ]
 })
 
-
-export default router
+// Menu should have 2 levels.
+function generateRoutesFromMenu (menu = [], routes = []) {
+  for (let i = 0, l = menu.length; i < l; i++) {
+    let item = menu[i]
+    if (item.path) {
+      routes.push(item)
+    }
+    if (!item.component) {
+      generateRoutesFromMenu(item.children, routes)
+    }
+  }
+  return routes
+}

@@ -1,0 +1,9 @@
+.modal {
+    z-index: 1025;
+}
+
+.modal-card {
+    @include tablet() {
+        width: 850px;
+    }
+}

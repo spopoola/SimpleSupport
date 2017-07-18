@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->integer('active')->default(0);
             $table->string('company')->nullable();
-            $table->string('profile_pic')->nullable();
+            $table->unsignedInteger('avatar_id')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

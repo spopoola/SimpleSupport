@@ -1,0 +1,16 @@
+.nav {
+    &.app-navbar {
+        height: 4.0rem;
+        position: fixed;
+        width: 100%;
+        z-index: 1024;
+
+        .nav-item img {
+            max-height: 2.5rem;
+        }
+
+        .nav-toggle {
+            height: 4rem;
+        }
+    }
+}

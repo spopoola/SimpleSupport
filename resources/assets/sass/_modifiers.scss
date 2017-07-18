@@ -1,0 +1,36 @@
+.is-circle img {
+    border-radius: 50%;
+}
+
+.is-danger .dropdown-toggle {
+    border: 1px solid #ff3860 !important;
+}
+
+.image.is-centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.field.is-grouped.is-centered {
+    overflow: auto;
+}
+
+.box {
+    &.is-scrollable {
+        width: 100%;
+        overflow: auto;
+    }
+
+    &.aligner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.column {
+    &.is-middle {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}

@@ -1,0 +1,48 @@
+.app-sidebar {
+    z-index: 1;
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    bottom: 0;
+    padding: 20px 0 50px;
+    width: 200px;
+    min-width: 45px;
+    max-height: 100vh;
+    height: calc(100% - 50px);
+    background: #fff;
+    box-shadow: 0 2px 3px hsla(0,0%,7%,.1), 0 0 0 1px hsla(0,0%,7%,.1);
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .icon {
+        vertical-align: baseline;
+        &.is-angle {
+            position: absolute;
+            right: 10px;
+            transition: transform .377s ease;
+        }
+
+        &.is-small {
+            width: 2rem;
+        }
+    }
+
+    .menu-label {
+        padding-left: 5px;
+        font-size: 0.8em;
+    }
+
+    .menu-list {
+        li a {
+            &[aria-expanded="true"] {
+                .is-angle {
+                    transform: rotate(180deg);
+                }   
+            }
+        }
+
+        li a + ul {
+            margin: 0 10px 0 15px;
+        }
+    }
+}
