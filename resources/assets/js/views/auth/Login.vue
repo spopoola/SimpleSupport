@@ -10,10 +10,10 @@
                             <form @submit.prevent="login">
                                 <div class="field">
                                     <label class="label">Email</label>
-                                    <p class="control has-icons-right">
+                                    <p class="control has-icons-left">
                                         <input type="email" class="input" :class="{ 'is-danger' : error.email }" placeholder="Email" v-model="data.body.email">
-                                        <span class="icon is-small is-right">
-                                            <i class="fa fa-warning"></i>
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-envelope"></i>
                                         </span>
                                     </p>
                                     <p class="help is-danger" v-if="error.email" v-text="error.email[0]"></p>
@@ -21,10 +21,10 @@
 
                                 <div class="field">
                                     <label class="label">Password</label>
-                                    <p class="control has-icons-right">
+                                    <p class="control has-icons-left">
                                         <input type="password" class="input" :class="{ 'is-danger' : error.password }" placeholder="Password" v-model="data.body.password">
-                                        <span class="icon is-small is-right">
-                                            <i class="fa fa-warning"></i>
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-lock"></i>
                                         </span>
                                     </p>
                                     <p class="help is-danger" v-if="error.password" v-text="error.password[0]"></p>
