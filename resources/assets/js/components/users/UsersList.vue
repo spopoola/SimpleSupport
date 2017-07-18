@@ -9,7 +9,6 @@
                             <tr>
                                 <th>Name</th>
                                 <th>Email</th>
-                                <th>Job Title</th>
                                 <th>Mobile</th>
                                 <th></th>
                             </tr>
@@ -21,7 +20,7 @@
 
                         <tbody v-else>
                             <tr>
-                                <td colspan="6">There are not users created.</td>
+                                <td colspan="4">There are not users created.</td>
                             </tr>
                         </tbody>
                     </table>

@@ -11,7 +11,6 @@
                         </div>
                         <div class="media-content">
                             <p class="title is-3" v-text="$auth.user().full_name"></p>
-                            <p class="subtitle is-5" v-text="$auth.user().job_title"></p>
                         </div>
                     </div>
                 </div>
@@ -84,18 +83,6 @@
 
                         <div class="field is-horizontal">
                             <div class="field-label is-normal">
-                                <label for="name" class="label">Job Title</label>
-                            </div>
-                            <div class="field-body">
-                                <div class="field">
-                                    <input type="text" class="input" :class="{ 'is-danger' : form.errors.has('job_title') }" placeholder="Job Title" v-model="form.job_title">
-                                    <span class="help is-danger" v-if="form.errors.has('job_title')" v-text="form.errors.get('job_title')"></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="field is-horizontal">
-                            <div class="field-label is-normal">
                                 <label for="name" class="label">Mobile</label>
                             </div>
                             <div class="field-body">
@@ -108,23 +95,11 @@
 
                         <div class="field is-horizontal">
                             <div class="field-label is-normal">
-                                <label for="name" class="label">Signature</label>
-                            </div>
-                            <div class="field-body">
-                                <div class="field">
-                                    <textarea class="textarea" :class="{ 'is-danger' : form.errors.has('signature') }" placeholder="Signature" v-model="form.signature"></textarea>
-                                    <span class="help is-danger" v-if="form.errors.has('signature')" v-text="form.errors.get('signature')"></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="field is-horizontal">
-                            <div class="field-label is-normal">
                                 <label for="name" class="label">Profile Picture</label>
                             </div>
                             <div class="field-body">
                                 <div class="field">
-                                    <avatar-upload endpoint="/api/users/avatar" v-model="form.avatar_id" :currentAvatar="$auth.user().avatar ? $auth.user().thumbnail : ''"/>
+                                    <avatar-upload endpoint="/api/users/avatar" v-model="form.avatar_id" :currentAvatar="$auth.user().avatar_id ? $auth.user().thumbnail : ''"/>
                                 </div>
                             </div>
                         </div>

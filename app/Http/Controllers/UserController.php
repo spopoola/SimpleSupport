@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Account\Avatar;
+use App\Avatar;
 use App\Transformers\UserTransformer;
 use App\User;
 use Illuminate\Http\Request;
@@ -35,7 +35,7 @@ class UserController extends Controller
             'last_name' => 'required',
         ]);
 
-        $user = User::create(request()->only('email', 'password', 'first_name', 'last_name', 'job_title', 'mobile', 'signature'));
+        $user = User::create(request()->only('email', 'password', 'first_name', 'last_name', 'mobile'));
 
         return [
             "success" => "You have created " . str_plural($user->full_name) . " user!",
@@ -64,7 +64,7 @@ class UserController extends Controller
             $user->save();
         }
 
-        $user->update(request()->only('email', 'first_name', 'last_name', 'job_title', 'mobile', 'signature'));
+        $user->update(request()->only('email', 'first_name', 'last_name', 'mobile'));
 
         return [
             "success" => "You have updated " . str_plural($user->full_name) . " user!",
@@ -118,7 +118,7 @@ class UserController extends Controller
                 });
         }
 
-        $user->update(request()->only('email', 'first_name', 'last_name', 'job_title', 'mobile', 'avatar_id'));
+        $user->update(request()->only('email', 'first_name', 'last_name', 'mobile', 'avatar_id'));
 
         return ['success' => 'Your profile has been updated!'];
     }

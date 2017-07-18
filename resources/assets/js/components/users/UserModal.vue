@@ -70,18 +70,6 @@
 
         <div class="field is-horizontal">
             <div class="field-label is-normal">
-                <label for="name" class="label">Job Title</label>
-            </div>
-            <div class="field-body">
-                <div class="field">
-                    <input type="text" class="input" :class="{ 'is-danger' : form.errors.has('job_title') }" placeholder="Job Title" v-model="form.job_title">
-                    <span class="help is-danger" v-if="form.errors.has('job_title')" v-text="form.errors.get('job_title')"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="field is-horizontal">
-            <div class="field-label is-normal">
                 <label for="name" class="label">Mobile</label>
             </div>
             <div class="field-body">
@@ -118,7 +106,6 @@
                         last_name: null,
                         password: null,
                         password_confirmation: null,
-                        job_title: null,
                         mobile: null,
                     })
                 }
