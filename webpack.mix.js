@@ -7,7 +7,8 @@ let mix = require('laravel-mix');
 // Styles
 //-------------------------------------------------------
 mix.sass('resources/assets/sass/site.scss', 'public/css')
-    .sass('resources/assets/sass/app.scss', 'public/css');
+    .sass('resources/assets/sass/app.scss', 'public/css')
+    .copy('resources/assets/images', 'public/images');
 
 /**
  * Javascripts
