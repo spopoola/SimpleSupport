@@ -1,10 +1,10 @@
 <template>
-    <section class="hero is-info is-bold is-fullheight">
+    <section class="hero is-fullheight bkg-blue is-bold">
         <div class="hero-body">
             <div class="container">
                 <div class="columns is-vcentered is-multiline">
                     <div class="column is-4 is-offset-4">
-                        <h1 class="title">Sign In</h1>
+                        <h1 class="title is-white">SimpleSupport Sign In</h1>
                         <div class="box">
                             <form @submit.prevent="login">
                                 <div class="field">

@@ -13073,7 +13073,7 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('section', {
-    staticClass: "hero is-info is-bold is-fullheight"
+    staticClass: "hero is-fullheight bkg-blue is-bold"
   }, [_c('div', {
     staticClass: "hero-body"
   }, [_c('div', {
@@ -13083,8 +13083,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "column is-4 is-offset-4"
   }, [_c('h1', {
-    staticClass: "title"
-  }, [_vm._v("Sign In")]), _vm._v(" "), _c('div', {
+    staticClass: "title is-white"
+  }, [_vm._v("SimpleSupport Sign In")]), _vm._v(" "), _c('div', {
     staticClass: "box"
   }, [_c('form', {
     on: {
@@ -29124,10 +29124,18 @@ module.exports = Component.exports
 
 /***/ }),
 
+/***/ "./resources/assets/sass/site.scss":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__("./resources/assets/js/app.js");
+__webpack_require__("./resources/assets/sass/site.scss");
 module.exports = __webpack_require__("./resources/assets/sass/app.scss");
 
 

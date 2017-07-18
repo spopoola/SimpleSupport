@@ -14,7 +14,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
  // With moment.js
 
-var types = ['line', 'bar', 'radar', 'polarArea', 'pie', 'doughnut', 'bubble'];
+var types = ['line', 'bar', 'radar', 'polarArea', 'pie', 'doughnut'];
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 

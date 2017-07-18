@@ -1,10 +1,10 @@
-@import "variables";
+@import "modules/admin/variables";
 @import "~bulma";
-@import "navbar";
-@import "sidebar";
-@import "modal";
-@import "modifiers";
-@import "helpers";
+@import "modules/admin/navbar";
+@import "modules/admin/sidebar";
+@import "modules/admin/modal";
+@import "modules/admin/modifiers";
+@import "modules/admin/helpers";
 // Front end SCSS needs separating
 // @import "main";
 // @import "modules/pages/home";

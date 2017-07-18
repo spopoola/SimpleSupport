@@ -12,7 +12,7 @@
     </script>
 
     <title>Welcome to SimpleSupport</title>
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/site.css') }}">
 
 </head>
     <body>
