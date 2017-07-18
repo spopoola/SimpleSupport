@@ -16,7 +16,7 @@ class IndexController extends Controller
 
     public function portal()
     {
-        return view('portal');
+        return view('site.portal');
     }
 }
 

@@ -1,4 +1,4 @@
-@extends('master')
+@extends('layouts.admin')
 
 @section('content')
     <app v-if="$auth.check()"></app>
