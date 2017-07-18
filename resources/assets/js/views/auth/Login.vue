@@ -4,7 +4,8 @@
             <div class="container">
                 <div class="columns is-vcentered is-multiline">
                     <div class="column is-4 is-offset-4 is-mobile">
-                        <h2 class="title is-medium  is-white">SimpleSupport Sign In</h2>
+                        <p class="title is-white is-spaced">SimpleSupport</p>
+                        <p class="subtitle is-white is-4">Sign In</p>
                         <div class="box">
                             <form @submit.prevent="login">
                                 <div class="field">
