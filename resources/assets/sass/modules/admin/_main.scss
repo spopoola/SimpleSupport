@@ -1,0 +1,24 @@
+.animated {
+  animation-duration: .377s;
+}
+
+.app-main {
+  padding-top: 4rem;
+  margin-left: 200px;
+  transform: translate3d(0, 0, 0);
+  @include mobile() {
+    margin-left: 0;
+  }
+}
+
+.app-content {
+  padding: 20px;
+}
+
+.nprogress-container {
+  position: fixed!important;
+  width: 100%;
+  height: 4.0rem;
+  z-index: 2048;
+  pointer-events: none;
+}

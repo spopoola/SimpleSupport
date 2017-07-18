@@ -3,8 +3,8 @@
         <div class="hero-body">
             <div class="container">
                 <div class="columns is-vcentered is-multiline">
-                    <div class="column is-4 is-offset-4">
-                        <h1 class="title is-white">SimpleSupport Sign In</h1>
+                    <div class="column is-4 is-offset-4 is-mobile">
+                        <h2 class="title is-medium  is-white">SimpleSupport Sign In</h2>
                         <div class="box">
                             <form @submit.prevent="login">
                                 <div class="field">

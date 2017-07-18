@@ -13081,9 +13081,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "columns is-vcentered is-multiline"
   }, [_c('div', {
-    staticClass: "column is-4 is-offset-4"
-  }, [_c('h1', {
-    staticClass: "title is-white"
+    staticClass: "column is-4 is-offset-4 is-mobile"
+  }, [_c('h2', {
+    staticClass: "title is-medium is-white"
   }, [_vm._v("SimpleSupport Sign In")]), _vm._v(" "), _c('div', {
     staticClass: "box"
   }, [_c('form', {
