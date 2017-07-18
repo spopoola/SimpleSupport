@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginFormRequest;
 use App\Http\Requests\Auth\RegisterFormRequest;
+use App\Transformers\UserTransformer;
 use App\User;
 use Illuminate\Http\Request;
 use Tymon\JWTAuth\Exceptions\JWTException;
@@ -68,8 +69,6 @@ class AuthController extends Controller
 
     public function user()
     {
-        return [
-            'data' => request()->user(),
-        ];
+        return fractal(request()->user(), new UserTransformer)->toArray();
     }
 }

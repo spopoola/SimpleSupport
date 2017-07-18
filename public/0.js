@@ -267,18 +267,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -302,7 +290,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
                     last_name: null,
                     password: null,
                     password_confirmation: null,
-                    job_title: null,
                     mobile: null
                 });
             }
@@ -352,7 +339,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__("./node_modules/vuex/dist/vuex.esm.js");
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-//
 //
 //
 //
@@ -482,7 +468,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0____ = __webpack_require__("./resources/assets/js/components/users/index.js");
-//
 //
 //
 //
@@ -677,31 +662,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_form_form__ = __webpack_require__("./resources/assets/js/core/form/form.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_users___ = __webpack_require__("./resources/assets/js/components/users/index.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -29478,11 +29438,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     })
   })) : _c('tbody', [_vm._m(1)])])])])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('thead', [_c('tr', [_c('th', [_vm._v("Name")]), _vm._v(" "), _c('th', [_vm._v("Email")]), _vm._v(" "), _c('th', [_vm._v("Job Title")]), _vm._v(" "), _c('th', [_vm._v("Mobile")]), _vm._v(" "), _c('th')])])
+  return _c('thead', [_c('tr', [_c('th', [_vm._v("Name")]), _vm._v(" "), _c('th', [_vm._v("Email")]), _vm._v(" "), _c('th', [_vm._v("Mobile")]), _vm._v(" "), _c('th')])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('tr', [_c('td', {
     attrs: {
-      "colspan": "6"
+      "colspan": "4"
     }
   }, [_vm._v("There are not users created.")])])
 }]}
@@ -29522,11 +29482,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "title is-3",
     domProps: {
       "textContent": _vm._s(_vm.$auth.user().full_name)
-    }
-  }), _vm._v(" "), _c('p', {
-    staticClass: "subtitle is-5",
-    domProps: {
-      "textContent": _vm._s(_vm.$auth.user().job_title)
     }
   })])])])]), _vm._v(" "), _c('div', {
     staticClass: "column"
@@ -29726,41 +29681,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: (_vm.form.job_title),
-      expression: "form.job_title"
-    }],
-    staticClass: "input",
-    class: {
-      'is-danger': _vm.form.errors.has('job_title')
-    },
-    attrs: {
-      "type": "text",
-      "placeholder": "Job Title"
-    },
-    domProps: {
-      "value": (_vm.form.job_title)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.form.job_title = $event.target.value
-      }
-    }
-  }), _vm._v(" "), (_vm.form.errors.has('job_title')) ? _c('span', {
-    staticClass: "help is-danger",
-    domProps: {
-      "textContent": _vm._s(_vm.form.errors.get('job_title'))
-    }
-  }) : _vm._e()])])]), _vm._v(" "), _c('div', {
-    staticClass: "field is-horizontal"
-  }, [_vm._m(6), _vm._v(" "), _c('div', {
-    staticClass: "field-body"
-  }, [_c('div', {
-    staticClass: "field"
-  }, [_c('input', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
       value: (_vm.form.mobile),
       expression: "form.mobile"
     }],
@@ -29788,41 +29708,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }) : _vm._e()])])]), _vm._v(" "), _c('div', {
     staticClass: "field is-horizontal"
-  }, [_vm._m(7), _vm._v(" "), _c('div', {
-    staticClass: "field-body"
-  }, [_c('div', {
-    staticClass: "field"
-  }, [_c('textarea', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.form.signature),
-      expression: "form.signature"
-    }],
-    staticClass: "textarea",
-    class: {
-      'is-danger': _vm.form.errors.has('signature')
-    },
-    attrs: {
-      "placeholder": "Signature"
-    },
-    domProps: {
-      "value": (_vm.form.signature)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.form.signature = $event.target.value
-      }
-    }
-  }), _vm._v(" "), (_vm.form.errors.has('signature')) ? _c('span', {
-    staticClass: "help is-danger",
-    domProps: {
-      "textContent": _vm._s(_vm.form.errors.get('signature'))
-    }
-  }) : _vm._e()])])]), _vm._v(" "), _c('div', {
-    staticClass: "field is-horizontal"
-  }, [_vm._m(8), _vm._v(" "), _c('div', {
+  }, [_vm._m(6), _vm._v(" "), _c('div', {
     staticClass: "field-body"
   }, [_c('div', {
     staticClass: "field"
@@ -29838,7 +29724,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       },
       expression: "form.avatar_id"
     }
-  })], 1)])]), _vm._v(" "), _c('hr'), _vm._v(" "), _vm._m(9)])])])])])
+  })], 1)])]), _vm._v(" "), _c('hr'), _vm._v(" "), _vm._m(7)])])])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "field-label is-normal"
@@ -29892,25 +29778,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "for": "name"
     }
-  }, [_vm._v("Job Title")])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "field-label is-normal"
-  }, [_c('label', {
-    staticClass: "label",
-    attrs: {
-      "for": "name"
-    }
   }, [_vm._v("Mobile")])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "field-label is-normal"
-  }, [_c('label', {
-    staticClass: "label",
-    attrs: {
-      "for": "name"
-    }
-  }, [_vm._v("Signature")])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "field-label is-normal"
@@ -30180,48 +30048,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "for": "name"
     }
-  }, [_vm._v("Job Title")])]), _vm._v(" "), _c('div', {
-    staticClass: "field-body"
-  }, [_c('div', {
-    staticClass: "field"
-  }, [_c('input', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.form.job_title),
-      expression: "form.job_title"
-    }],
-    staticClass: "input",
-    class: {
-      'is-danger': _vm.form.errors.has('job_title')
-    },
-    attrs: {
-      "type": "text",
-      "placeholder": "Job Title"
-    },
-    domProps: {
-      "value": (_vm.form.job_title)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.form.job_title = $event.target.value
-      }
-    }
-  }), _vm._v(" "), (_vm.form.errors.has('job_title')) ? _c('span', {
-    staticClass: "help is-danger",
-    domProps: {
-      "textContent": _vm._s(_vm.form.errors.get('job_title'))
-    }
-  }) : _vm._e()])])]), _vm._v(" "), _c('div', {
-    staticClass: "field is-horizontal"
-  }, [_c('div', {
-    staticClass: "field-label is-normal"
-  }, [_c('label', {
-    staticClass: "label",
-    attrs: {
-      "for": "name"
-    }
   }, [_vm._v("Mobile")])]), _vm._v(" "), _c('div', {
     staticClass: "field-body"
   }, [_c('div', {
@@ -30331,10 +30157,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   })])])])]), _vm._v(" "), _c('td', {
     domProps: {
       "textContent": _vm._s(_vm.user.email)
-    }
-  }), _vm._v(" "), _c('td', {
-    domProps: {
-      "textContent": _vm._s(_vm.user.job_title)
     }
   }), _vm._v(" "), _c('td', {
     domProps: {

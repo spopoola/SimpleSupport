@@ -16,7 +16,6 @@
             </article>
         </td>
         <td v-text="user.email"></td>
-        <td v-text="user.job_title"></td>
         <td v-text="user.mobile"></td>
         <td>
             <button class="button is-success" @click="editUser(user)">

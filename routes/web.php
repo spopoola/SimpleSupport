@@ -13,3 +13,4 @@
 
 Route::get('/', ['as' => 'home', 'uses' => 'IndexController@index']);
 Route::get('/portal', ['as' => 'portal', 'uses' => 'IndexController@portal']);
+Route::get('avatar/{user}', 'UserController@avatar')->name('generate.avatar');

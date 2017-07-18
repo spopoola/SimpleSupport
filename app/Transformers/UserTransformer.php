@@ -20,9 +20,7 @@ class UserTransformer extends TransformerAbstract
             'first_name' => $user->first_name,
             'last_name' => $user->last_name,
             'full_name' => $user->full_name,
-            'job_title' => $user->job_title,
             'mobile' => $user->mobile,
-            'signature' => $user->signature,
             'thumbnail' => $user->thumbnail,
         ];
     }

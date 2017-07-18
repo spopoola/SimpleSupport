@@ -14,9 +14,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+    protected $fillable = ['first_name', 'last_name', 'email', 'password', 'job_title', 'mobile', 'avatar_id'];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -30,5 +28,15 @@ class User extends Authenticatable
     public function getFullNameAttribute()
     {
         return $this->first_name . ' ' . $this->last_name;
+    }
+
+    public function getThumbnailAttribute()
+    {
+        return $this->avatar ? $this->avatar->thumbnail() : route('generate.avatar', $this->id);
+    }
+
+    public function avatar()
+    {
+        return $this->hasOne(Avatar::class, 'id', 'avatar_id');
     }
 }
