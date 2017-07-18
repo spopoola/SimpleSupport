@@ -29715,7 +29715,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('avatar-upload', {
     attrs: {
       "endpoint": "/api/users/avatar",
-      "currentAvatar": _vm.$auth.user().avatar ? _vm.$auth.user().thumbnail : ''
+      "currentAvatar": _vm.$auth.user().thumbnail ? _vm.$auth.user().thumbnail : ''
     },
     model: {
       value: (_vm.form.avatar_id),

@@ -99,7 +99,7 @@
                             </div>
                             <div class="field-body">
                                 <div class="field">
-                                    <avatar-upload endpoint="/api/users/avatar" v-model="form.avatar_id" :currentAvatar="$auth.user().avatar ? $auth.user().thumbnail : ''"/>
+                                    <avatar-upload endpoint="/api/users/avatar" v-model="form.avatar_id" :currentAvatar="$auth.user().thumbnail ? $auth.user().thumbnail : ''"/>
                                 </div>
                             </div>
                         </div>
