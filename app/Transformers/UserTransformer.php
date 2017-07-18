@@ -22,6 +22,7 @@ class UserTransformer extends TransformerAbstract
             'full_name' => $user->full_name,
             'mobile' => $user->mobile,
             'thumbnail' => $user->thumbnail,
+            'avatar_id' => $user->avatar_id,
         ];
     }
 }
