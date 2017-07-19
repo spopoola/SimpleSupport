@@ -3,7 +3,7 @@
         <div class="container">
             <div class="nav-left">
                 <a class="nav-item">
-                    <img src="/images/logo.png">
+                    <img src="/images/ss_logo.png">
                 </a>
             </div>
 
