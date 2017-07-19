@@ -28,4 +28,6 @@ Route::group(['middleware' => 'jwt.auth'], function () {
     Route::patch('users/{user}/status', 'UserController@updateStatus');
     Route::delete('users/{user}', 'UserController@destroy');
     Route::post('users/avatar', 'Account\AvatarController@store');
+
+    Route::get('tickets', 'Admin\TicketsController@index');
 });
