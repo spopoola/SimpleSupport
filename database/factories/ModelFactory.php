@@ -25,3 +25,33 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\TicketStatus::class, function (Faker\Generator $faker) {
+
+    return [
+        'name' => 'Open',
+        'color' => '#FF0000'
+    ];
+});
+
+$factory->define(App\TicketPriority::class, function (Faker\Generator $faker) {
+
+    return [
+        'name' => 'Low',
+        'color' => '#FF0000'
+    ];
+});
+
+$factory->define(App\Ticket::class, function (Faker\Generator $faker) {
+
+    return [
+        'ticket_number' => str_random(10),
+        'subject' => 'Ticket #' .rand(1, 10),
+        'content' => $faker->sentences(),
+        'priority_id' => factory(App\TicketPriority::class)->create()->id,
+        'status_id' => factory(App\TicketStatus::class)->create()->id,
+    ];
+});
+
+
+

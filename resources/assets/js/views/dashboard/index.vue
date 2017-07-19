@@ -21,7 +21,7 @@
       </div>
       <div class="tile is-parent">
         <article class="tile is-child box">
-          <p class="title is-4"> <i class="fa fa-hourglass-end"></i>Due Today</p>
+          <p class="title is-4"> <i class="fa fa-hourglass-end"></i> Due Today</p>
           <p class="subtitle">2</p>
         </article>
       </div>
