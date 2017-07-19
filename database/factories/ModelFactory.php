@@ -46,8 +46,8 @@ $factory->define(App\Ticket::class, function (Faker\Generator $faker) {
 
     return [
         'ticket_number' => str_random(10),
-        'subject' => 'Ticket #' .rand(1, 10),
-        'content' => $faker->sentences(),
+        'subject' => 'Ticket #1',
+        'content' => $faker->text,
         'priority_id' => factory(App\TicketPriority::class)->create()->id,
         'status_id' => factory(App\TicketStatus::class)->create()->id,
     ];
