@@ -22,7 +22,7 @@ class TicketTransformer extends TransformerAbstract
             'content' => $ticket->content,
             'priority_id' => $ticket->priority_id,
             'status_id' => $ticket->status_id,
-            'created_at' => $ticket->created_at,
+            'created_at' => $ticket->created_at->format('Y-m-d H:i:s'),
         ];
     }
 }
