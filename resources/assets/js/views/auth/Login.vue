@@ -4,7 +4,9 @@
             <div class="container">
                 <div class="columns is-vcentered is-multiline">
                     <div class="column is-4 is-offset-4 is-mobile">
-                        <p class="title is-white is-spaced has-text-centered">SimpleSupport</p>
+                            <div class="login-logo has-text-centered">
+                                <img src="/images/ss_logo.png">
+                            </div>
                         <p class="subtitle is-white is-4 has-text-centered">Sign In</p>
                         <div class="box">
                             <form @submit.prevent="login">
