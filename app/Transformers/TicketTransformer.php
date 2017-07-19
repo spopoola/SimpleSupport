@@ -24,7 +24,7 @@ class TicketTransformer extends TransformerAbstract
     {
         return [
             'id' => $ticket->id,
-            'email' => $ticket->ticket_number,
+            'ticket_number' => $ticket->ticket_number,
             'subject' => $ticket->subject,
             'content' => $ticket->content,
             'priority_id' => $ticket->priority_id,
@@ -36,7 +36,8 @@ class TicketTransformer extends TransformerAbstract
     /**
      * Include Status
      *
-     * @return League\Fractal\ItemResource
+     * @param Ticket $ticket
+     * @return \League\Fractal\Resource\Item
      */
     public function includeStatus(Ticket $ticket)
     {
@@ -49,7 +50,8 @@ class TicketTransformer extends TransformerAbstract
     /**
      * Include Priority
      *
-     * @return League\Fractal\ItemResource
+     * @param Ticket $ticket
+     * @return \League\Fractal\Resource\Item
      */
     public function includePriority(Ticket $ticket)
     {

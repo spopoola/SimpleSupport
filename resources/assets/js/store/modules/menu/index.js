@@ -48,6 +48,58 @@ const state = {
                 }
             ]
         },
+
+        {
+            name: 'Tickets',
+            meta: {
+                icon: 'fa-envelope',
+                expanded: false
+            },
+
+            children: [
+                {
+                    name: 'My Tickets',
+                    path: '/profile',
+                    meta: {
+                        label: 'My Tickets',
+                        link: 'tickets/TicketsList.vue',
+                        auth: true,
+                    },
+                    component: lazyLoading('tickets/TicketsList')
+                },
+                {
+                    name: 'tickets.index',
+                    path: '/tickets',
+                    meta: {
+                        label: 'Unassigned',
+                        link: 'tickets/index.vue',
+                        auth: true,
+                    },
+                    component: lazyLoading('tickets', true)
+                },
+
+                {
+                    name: 'Overdue',
+                    path: '/tickets',
+                    meta: {
+                        label: 'My Tickets',
+                        link: 'tickets/index.vue',
+                        auth: true,
+                    },
+                    component: lazyLoading('tickets/TicketsList')
+                },
+                {
+                    name: 'Due Today',
+                    path: '/tickets',
+                    meta: {
+                        label: 'Due Today',
+                        link: 'tickets/index.vue',
+                        auth: true,
+                    },
+                    component: lazyLoading('tickets/TicketsList')
+                }
+            ]
+        },
         
     ]
 }
