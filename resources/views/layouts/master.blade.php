@@ -17,7 +17,21 @@
 </head>
     <body>
         <div id="app">
-            @yield('content')
+            <section class="hero is-fullheight is-dark">
+                <div class="hero-head">
+                    <div class="container">
+                        @include('layouts.partials._nav')
+                    </div>
+                </div>
+
+                @yield('content')
+
+                <div class="hero-foot">
+                    <div class="container">
+                        @include('layouts.partials._footer')
+                    </div>
+                </div>
+            </section>
         </div>
 
         <script src="{{ mix('js/app.js') }}"></script>
