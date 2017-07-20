@@ -18,6 +18,7 @@ Route::post('/logout', 'Auth\AuthController@logout');
     
 Route::group(['middleware' => 'jwt.auth'], function () {
 
+    // Users
     Route::get('/me', 'Auth\AuthController@user');
 
     Route::get('users', 'UserController@index');
@@ -29,5 +30,9 @@ Route::group(['middleware' => 'jwt.auth'], function () {
     Route::delete('users/{user}', 'UserController@destroy');
     Route::post('users/avatar', 'Account\AvatarController@store');
 
+    // Tickets
+    Route::get('tickets/{ticket}', 'Admin\TicketsController@show');
     Route::get('tickets', 'Admin\TicketsController@index');
+    Route::post('tickets', 'Admin\TicketsController@store');
+    Route::patch('tickets/{ticket}', 'Admin\TicketsController@update');
 });

@@ -43,7 +43,7 @@
 <script>
 
   import { mapActions, mapGetters } from 'vuex'
-  import { TicketsList } from '../../components/tickets'
+  import { TicketsList, TicketModal } from '../../components/tickets'
 
   export default {
     mounted () {
