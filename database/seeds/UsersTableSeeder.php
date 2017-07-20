@@ -18,5 +18,9 @@ class UsersTableSeeder extends Seeder
             'email' => 'support@simplesupport.com',
             'password' => bcrypt('support')
         ]);
+
+        factory(User::class, 6)->create([
+            'password' => bcrypt('support')
+        ]);
     }
 }
