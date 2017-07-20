@@ -21,11 +21,20 @@ These instructions will get you a copy of the project up and running on your loc
 * Execute migrations
 `php artisan migrate`
 
-* Run the seeder table to populate the database
-  `php artisan db:seed --class=UsersTableSeeder`
-  `php artisan db:seed --class=TicketsTableSeeder`
   
 * Compile assets: `npm run dev`
+
+# Sample Data
+You Run the seeder table to populate the database by running the following;
+
+  `php artisan db:seed --class=UsersTableSeeder`
+  
+  `php artisan db:seed --class=TicketsTableSeeder`
+
+Once the tables are populated, you can log in with the sample user;
+
+email: `support@simplesupport.com`
+Password: `support`
 
 
 ## Built With
