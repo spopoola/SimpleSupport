@@ -5,6 +5,8 @@
         <td v-text="assigned"></td>
         <td v-text="ticket.status.data.name" v-bind:style="{ color: ticket.status.data.color}"></td>
         <td v-text="ticket.priority.data.name" v-bind:style="{ color: ticket.priority.data.color}"></td>
+        <td><i class="fa fa-envelope"></i></td>
+        <td><i class="fa fa-trash"></i></td>
     </tr>
 </template>
 

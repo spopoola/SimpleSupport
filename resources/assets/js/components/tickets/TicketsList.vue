@@ -12,6 +12,8 @@
                             <th>Agent</th>
                             <th>Status</th>
                             <th>Priority</th>
+                            <th></th>
+                            <th></th>
 
                         </tr>
                         </thead>
