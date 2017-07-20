@@ -20,4 +20,9 @@ class Ticket extends Model
     {
         return $this->belongsTo(TicketPriority::class);
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

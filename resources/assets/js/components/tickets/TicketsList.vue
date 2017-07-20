@@ -9,8 +9,10 @@
                         <tr>
                             <th>Subject</th>
                             <th>Ticket ID</th>
+                            <th>Agent</th>
                             <th>Status</th>
                             <th>Priority</th>
+
                         </tr>
                         </thead>
 

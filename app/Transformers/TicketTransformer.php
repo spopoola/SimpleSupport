@@ -6,6 +6,7 @@ namespace App\Transformers;
 use App\Ticket;
 use App\Transformers\TicketPriorityTransformer;
 use App\Transformers\TicketStatusTransformer;
+use App\User;
 use League\Fractal\TransformerAbstract;
 
 class TicketTransformer extends TransformerAbstract
@@ -13,6 +14,7 @@ class TicketTransformer extends TransformerAbstract
     protected $defaultIncludes = [
         'status',
         'priority',
+        'user',
     ];
 
     /**
@@ -25,6 +27,7 @@ class TicketTransformer extends TransformerAbstract
         return [
             'id' => $ticket->id,
             'ticket_number' => $ticket->ticket_number,
+            'agent' => $ticket->user_id,
             'subject' => $ticket->subject,
             'content' => $ticket->content,
             'priority_id' => $ticket->priority_id,
@@ -58,5 +61,22 @@ class TicketTransformer extends TransformerAbstract
         $priority = $ticket->priority;
 
         return $this->item($priority, new TicketPriorityTransformer);
+    }
+
+    /**
+     * Include User
+     *
+     * @param Ticket $ticket
+     * @return \League\Fractal\Resource\Item
+     */
+    public function includeUser(Ticket $ticket)
+    {
+        $user = $ticket->user;
+
+        if (! is_null($user)) {
+            return $this->item($user, new UserTransformer);
+        }
+
+        return null;
     }
 }
