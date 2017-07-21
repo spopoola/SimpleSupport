@@ -37,6 +37,7 @@
         </article>
       </div>
     </div>
+    <ticket-modal />
   </div>
 </template>
 
