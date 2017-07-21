@@ -25,7 +25,7 @@
             </div>
             <div class="field-body">
                 <div class="field">
-                    <textarea class="input" :class="{ 'is-danger' : form.errors.has('password') }" placeholder="content" v-model="form.content"></textarea>
+                    <textarea class="textarea" :class="{ 'is-danger' : form.errors.has('password') }" placeholder="content" v-model="form.content"></textarea>
                     <span class="help is-danger" v-if="form.errors.has('content')" v-text="form.errors.get('content')"></span>
                 </div>
             </div>
