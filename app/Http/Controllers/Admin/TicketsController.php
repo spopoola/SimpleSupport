@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Ticket;
 use App\Http\Controllers\Controller;
 use App\Transformers\TicketTransformer;
+use App\User;
 
 class TicketsController extends Controller
 {
@@ -16,6 +17,11 @@ class TicketsController extends Controller
     public function index()
     {
         return fractal(Ticket::orderBy('created_at', 'DESC')->get(), new TicketTransformer)->toArray();
+    }
+
+    public function getByUser(User $user)
+    {
+        return fractal($user->tickets()->get(), new TicketTransformer)->toArray();
     }
 
     /**

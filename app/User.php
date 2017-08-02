@@ -39,4 +39,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(Avatar::class, 'id', 'avatar_id');
     }
+
+    public function tickets()
+    {
+        return $this->hasMany(Ticket::class);
+    }
 }
