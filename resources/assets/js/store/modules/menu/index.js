@@ -58,45 +58,48 @@ const state = {
 
             children: [
                 {
-                    name: 'My Tickets',
+                    name: 'users.tickets',
                     path: '/tickets/user',
                     meta: {
                         label: 'My Tickets',
                         link: 'tickets/TicketsList.vue',
                         auth: true,
                     },
-                    component: lazyLoading('tickets/TicketsList')
+                    component: lazyLoading('tickets', true)
                 },
                 {
                     name: 'tickets.index',
-                    path: '/tickets',
+                    path: '/tickets/unassigned',
                     meta: {
                         label: 'Unassigned',
                         link: 'tickets/index.vue',
                         auth: true,
+                        type: 'unassigned',
                     },
                     component: lazyLoading('tickets', true)
                 },
 
                 {
-                    name: 'Overdue',
-                    path: '/tickets',
+                    name: 'tickets.overdue',
+                    path: '/tickets/overdue',
                     meta: {
-                        label: 'My Tickets',
+                        label: 'Overdue',
                         link: 'tickets/index.vue',
                         auth: true,
+                        type: 'overdue',
                     },
-                    component: lazyLoading('tickets/TicketsList')
+                    component: lazyLoading('tickets', true)
                 },
                 {
-                    name: 'Due Today',
-                    path: '/tickets',
+                    name: 'tickets.due-today',
+                    path: '/tickets/due-today',
                     meta: {
                         label: 'Due Today',
                         link: 'tickets/index.vue',
                         auth: true,
+                        type: 'due_today',
                     },
-                    component: lazyLoading('tickets/TicketsList')
+                    component: lazyLoading('tickets', true)
                 }
             ]
         },
