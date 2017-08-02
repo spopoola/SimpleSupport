@@ -59,7 +59,7 @@ const state = {
             children: [
                 {
                     name: 'My Tickets',
-                    path: '/profile',
+                    path: '/tickets/user',
                     meta: {
                         label: 'My Tickets',
                         link: 'tickets/TicketsList.vue',
