@@ -31,6 +31,7 @@ Route::group(['middleware' => 'jwt.auth'], function () {
     Route::post('users/avatar', 'Account\AvatarController@store');
 
     // Tickets
+    Route::get('tickets/stats', 'Admin\TicketsController@getTicketStats');
     Route::get('tickets/{ticket}', 'Admin\TicketsController@show');
     Route::get('tickets', 'Admin\TicketsController@index');
     Route::post('tickets', 'Admin\TicketsController@store');

@@ -6,6 +6,7 @@ use App\Ticket;
 use App\Http\Controllers\Controller;
 use App\Transformers\TicketTransformer;
 use App\User;
+use Carbon\Carbon;
 
 class TicketsController extends Controller
 {
@@ -19,9 +20,34 @@ class TicketsController extends Controller
         return fractal(Ticket::orderBy('created_at', 'DESC')->get(), new TicketTransformer)->toArray();
     }
 
+    /**
+     * Get Tickets linked to a user
+     *
+     * @param User $user
+     * @return array
+     */
     public function getByUser(User $user)
     {
         return fractal($user->tickets()->get(), new TicketTransformer)->toArray();
+    }
+
+    /**
+     * Get Ticket stats
+     *
+     * @param User $user
+     * @return array
+     */
+    public function getTicketStats(User $user)
+    {
+        $startDate = Carbon::now()->startOfDay();
+        $endDate = Carbon::now()->endOfDay();
+
+        return [
+            'user_tickets' => $user->tickets()->count(),
+            'unassigned' => Ticket::whereNull('assigned_to')->count(),
+            'overdue' => Ticket::where('is_overdue', 1)->count(),
+            'due_today' => Ticket::whereBetween('created_at', [$startDate, $endDate])->count(),
+        ];
     }
 
     /**
