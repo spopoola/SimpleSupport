@@ -4,6 +4,9 @@ export default {
     [types.SET_TICKETS_DATA] (state, tickets) {
         state.tickets = tickets
     },
+    [types.SET_TICKET_STATS_DATA] (state, ticketStats) {
+        state.ticketStats = ticketStats
+    },
     [types.SET_TICKET_DATA] (state, ticket) {
         state.ticket = ticket
     },

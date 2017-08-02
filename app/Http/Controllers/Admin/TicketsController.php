@@ -37,7 +37,7 @@ class TicketsController extends Controller
      * @param User $user
      * @return array
      */
-    public function getTicketStats(User $user)
+    public function getTicketStats(User $user = null)
     {
         $startDate = Carbon::now()->startOfDay();
         $endDate = Carbon::now()->endOfDay();
