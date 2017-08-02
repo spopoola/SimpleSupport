@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Transformers\TicketTransformer;
 use App\User;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class TicketsController extends Controller
 {
@@ -37,10 +38,12 @@ class TicketsController extends Controller
      * @param User $user
      * @return array
      */
-    public function getTicketStats(User $user = null)
+    public function getTicketStats()
     {
         $startDate = Carbon::now()->startOfDay();
         $endDate = Carbon::now()->endOfDay();
+
+        $user = Auth::User();
 
         return [
             'user_tickets' => $user->tickets()->count(),
