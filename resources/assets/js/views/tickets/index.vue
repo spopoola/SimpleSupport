@@ -22,16 +22,14 @@
 
     export default {
 
-        data () {
-            return {
-                type: this.$route.meta.type ? this.$route.meta.type : '',
-            }
-        },
-
         computed: {
             ...mapGetters({
                 tickets: 'tickets/tickets',
-            })
+            }),
+
+            type () {
+                return this.$route.meta.type ? this.$route.meta.type : ''
+            }
         },
 
         methods: {
