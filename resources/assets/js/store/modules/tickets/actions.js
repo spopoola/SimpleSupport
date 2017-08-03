@@ -3,6 +3,7 @@ import * as types from './mutation-types'
 
 export const fetchTickets = ({ commit }, type) => {
     return new Promise((resolve, reject) => {
+        commit(types.SET_TICKETS_DATA, [])
         Vue.axios.get(`/api/tickets/type/${type}`)
         .then(({data}) => {
             commit(types.SET_TICKETS_DATA, data.data)

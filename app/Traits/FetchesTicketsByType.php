@@ -33,7 +33,7 @@ trait FetchesTicketsByType
             case 'due_today':
                 $startDate = Carbon::now()->startOfDay();
                 $endDate = Carbon::now()->endOfDay();
-                $tickets = $this->whereBetween('created_at', [$startDate, $endDate]);
+                $tickets = $this->whereBetween('created_at', [$startDate, $endDate])->get();
                 break;
             default:
                 $tickets = $this->whereNull('assigned_to')->get();
