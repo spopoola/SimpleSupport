@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import * as types from './mutation-types'
 
-export const fetchTickets = ({ commit }) => {
+export const fetchTickets = ({ commit }, type) => {
     return new Promise((resolve, reject) => {
-        Vue.axios.get('/api/tickets')
+        Vue.axios.get(`/api/tickets/type/${type}`)
         .then(({data}) => {
             commit(types.SET_TICKETS_DATA, data.data)
             resolve(data)

@@ -10,7 +10,7 @@
                 </article>
             </div>
         </div>
-        {{ type }}
+
         <ticket-modal />
     </div>
 </template>
@@ -21,6 +21,14 @@
     import { TicketsList, TicketModal } from '../../components/tickets'
 
     export default {
+        watch: {
+            type: {
+                handler () {
+                    this.fetchTickets(this.type)
+                },
+                immediate: true,
+            }
+        },
 
         computed: {
             ...mapGetters({

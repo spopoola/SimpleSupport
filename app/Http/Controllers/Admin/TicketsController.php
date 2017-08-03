@@ -5,12 +5,19 @@ namespace App\Http\Controllers\Admin;
 use App\Ticket;
 use App\Http\Controllers\Controller;
 use App\Transformers\TicketTransformer;
-use App\User;
-use Carbon\Carbon;
-use Illuminate\Support\Facades\Auth;
 
 class TicketsController extends Controller
 {
+    /**
+     * @var Ticket Instance of Ticket
+     */
+    private $ticket;
+
+    public function __construct(Ticket $ticket)
+    {
+
+        $this->ticket = $ticket;
+    }
     /**
      * Return all tickets
      *
@@ -18,39 +25,28 @@ class TicketsController extends Controller
      */
     public function index()
     {
-        return fractal(Ticket::orderBy('created_at', 'DESC')->get(), new TicketTransformer)->toArray();
+        return fractal($this->ticket->orderBy('created_at', 'DESC')->get(), new TicketTransformer)->toArray();
     }
 
     /**
-     * Get Tickets linked to a user
+     * Return Tickets by Type
      *
-     * @param User $user
+     * @param $type
      * @return array
      */
-    public function getByUser(User $user)
+    public function getByType($type)
     {
-        return fractal($user->tickets()->get(), new TicketTransformer)->toArray();
+        return fractal($this->ticket->getTickets($type), new TicketTransformer)->toArray();
     }
 
     /**
      * Get Ticket stats
      *
-     * @param User $user
      * @return array
      */
     public function getTicketStats()
     {
-        $startDate = Carbon::now()->startOfDay();
-        $endDate = Carbon::now()->endOfDay();
-
-        $user = Auth::User();
-
-        return [
-            'user_tickets' => $user->tickets()->count(),
-            'unassigned' => Ticket::whereNull('assigned_to')->count(),
-            'overdue' => Ticket::where('is_overdue', 1)->count(),
-            'due_today' => Ticket::whereBetween('created_at', [$startDate, $endDate])->count(),
-        ];
+        return $this->ticket->getStats();
     }
 
     /**
@@ -76,7 +72,7 @@ class TicketsController extends Controller
             'content' => 'required',
         ]);
 
-        $ticket = Ticket::create(request()->only('subject', 'content'));
+        $ticket = $this->ticket->create(request()->only('subject', 'content'));
 
         return [
             "success" => "You have created a new Ticket!",

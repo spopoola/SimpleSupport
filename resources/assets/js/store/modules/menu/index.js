@@ -63,6 +63,7 @@ const state = {
                     meta: {
                         label: 'My Tickets',
                         link: 'tickets/TicketsList.vue',
+                        type: 'user',
                         auth: true,
                     },
                     component: lazyLoading('tickets', true)
