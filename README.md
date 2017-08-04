@@ -17,7 +17,12 @@ These instructions will get you a copy of the project up and running on your loc
   
 * Install Front-end dependencies using yarn. You can install yarn with `npm install -g yarn`
    In the application root type in `yarn`
-   
+ 
+* Create your `.env` file and add Database details
+
+* Generate your application key
+`php artisan key:generate`  
+
 * Execute migrations
 `php artisan migrate`
 
