@@ -49,3 +49,12 @@ export const updateTicket = ({ commit }, form) => {
         }).catch((error) => reject(error))
     })
 }
+
+export const storeTicket = ({ commit }, form) => {
+    return new Promise((resolve, reject) => {
+        form.patch(`/api/tickets/${form.id}`).then(({data}) => {
+            commit(types.UPDATE_TICKET, data.ticket)
+            resolve(data)
+        }).catch((error) => reject(error))
+    })
+}

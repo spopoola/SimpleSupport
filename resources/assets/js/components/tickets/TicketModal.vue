@@ -25,7 +25,8 @@
             </div>
             <div class="field-body">
                 <div class="field">
-                    <textarea class="textarea" :class="{ 'is-danger' : form.errors.has('password') }" placeholder="content" v-model="form.content"></textarea>
+                    <vue-editor v-model="form.content"></vue-editor>
+                    <!-- <textarea class="textarea" :class="{ 'is-danger' : form.errors.has('password') }" placeholder="content" v-model="form.content"></textarea> -->
                     <span class="help is-danger" v-if="form.errors.has('content')" v-text="form.errors.get('content')"></span>
                 </div>
             </div>
@@ -42,6 +43,7 @@
 <script>
     import { mapActions } from 'vuex'
     import Form from '../../core/form/form'
+    import { VueEditor } from 'vue2-editor'
 
     export default {
         created () {
@@ -56,6 +58,10 @@
                     })
                 }
             })
+        },
+
+        components: {
+          VueEditor
         },
 
         data () {
@@ -75,6 +81,8 @@
             ...mapActions({
                 createTicket: 'tickets/createTicket',
                 updateTicket: 'tickets/updateTicket',
+                storeTicket: 'tickets/storeTicket',
+
             }),
 
             storeUser () {
