@@ -24,7 +24,7 @@
 
                         <tbody v-else>
                             <tr>
-                                <td colspan="4">There are no tickets created.</td>
+                                <td colspan="7">There are no tickets created.</td>
                             </tr>
                         </tbody>
                     </table>
