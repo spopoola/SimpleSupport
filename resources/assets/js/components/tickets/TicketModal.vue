@@ -85,9 +85,9 @@
 
             }),
 
-            storeUser () {
+            storeTicket () {
                 if (this.isEdit) {
-                    this.updateTciket(this.form).then(() => this.showModal = false)
+                    this.updateTicket(this.form).then(() => this.showModal = false)
                 } else {
                     this.createTicket(this.form).then(() => this.showModal = false)
                 }
