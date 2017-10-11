@@ -5,6 +5,11 @@ namespace App;
 use App\Traits\FetchesTicketsByType;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class Ticket
+ *
+ * @package App
+ */
 class Ticket extends Model
 {
     use FetchesTicketsByType;
