@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Generators\UniqueIDGeneration;
 use App\Ticket;
 use App\Http\Controllers\Controller;
 use App\Transformers\TicketTransformer;
@@ -72,10 +73,14 @@ class TicketsController extends Controller
             'content' => 'required',
         ]);
 
-        $ticket = $this->ticket->create(request()->only('subject', 'content'));
+        $newTicketRequest = request()->only('subject', 'content');
 
-        // Update ticket numnber
-        $ticket->update(['ticket_number' => 'ss-'.$ticket->id]);
+        $newTicket = array_merge(
+            $newTicketRequest,
+            ['ticket_number' => app(UniqueIDGeneration::class)->generate()]
+        );
+
+        $ticket = $this->ticket->create($newTicket);
 
         return [
             "success" => "You have created a new Ticket!",
