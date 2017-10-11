@@ -41,4 +41,6 @@ Route::group(['middleware' => 'jwt.auth'], function () {
     Route::get('tickets/type/unassigned', 'Admin\TicketsController@getUnassigned');
     Route::get('tickets/type/dueToday', 'Admin\TicketsController@getDueToday');
     Route::get('tickets/type/overdue', 'Admin\TicketsController@getOverdue');
+
+    Route::get('ticket-priorities', 'Admin\TicketPrioritiesController@index');
 });

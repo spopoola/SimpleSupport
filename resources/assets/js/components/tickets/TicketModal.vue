@@ -32,6 +32,18 @@
             </div>
         </div>
 
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label for="content" class="label">Priority</label>
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <priority-select v-model="form.priority_id" />
+                    <span class="help is-danger" v-if="form.errors.has('priority_id')" v-text="form.errors.get('priority_id')"></span>
+                </div>
+            </div>
+        </div>
+
 
         <template slot="footer">
             <button class="button is-primary" @click="storeTicket" v-text="isEdit ? 'Save' : 'Create'"></button>
@@ -44,8 +56,15 @@
     import { mapActions } from 'vuex'
     import Form from '../../core/form/form'
     import { VueEditor } from 'vue2-editor'
+    import { PrioritySelect } from './'
 
     export default {
+
+        components: {
+          VueEditor,
+          PrioritySelect,
+        },
+
         created () {
             Events.$on('ticket-modal', (trueOrFalse, ticket = false) => {
                 this.showModal = trueOrFalse
@@ -55,13 +74,10 @@
                     this.form = new Form({
                         subject: null,
                         content: null,
+                        priority_id: null,
                     })
                 }
             })
-        },
-
-        components: {
-          VueEditor
         },
 
         data () {
@@ -92,5 +108,6 @@
 
             },
         }
+
     }
 </script>
