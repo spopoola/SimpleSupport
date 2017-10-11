@@ -38,7 +38,7 @@
             </div>
             <div class="field-body">
                 <div class="field">
-                    <priority-select v-model="form.priority_id" />
+                    <priority-select v-model="form.priority_id" :has-errors="form.errors.has('priority_id')" />
                     <span class="help is-danger" v-if="form.errors.has('priority_id')" v-text="form.errors.get('priority_id')"></span>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                     this.form = new Form({
                         subject: null,
                         content: null,
-                        priority_id: null,
+                        priority_id: '',
                     })
                 }
             })
