@@ -22,4 +22,7 @@ export default {
             }
         }
     },
+    [types.DELETE_TICKET] (state, id) {
+        state.tickets = state.tickets.filter((ticket) => ticket.id !== id)
+    },
 }

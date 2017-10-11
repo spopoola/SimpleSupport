@@ -13,7 +13,7 @@
             </div>
             <div class="field-body">
                 <div class="field">
-                    <input type="text" class="input" :class="{ 'is-danger' : form.errors.has('subject') }" placeholder="Email" v-model="form.subject">
+                    <input type="text" class="input" :class="{ 'is-danger' : form.errors.has('subject') }" placeholder="Subject" v-model="form.subject">
                     <span class="help is-danger" v-if="form.errors.has('subject')" v-text="form.errors.get('subject')"></span>
                 </div>
             </div>
