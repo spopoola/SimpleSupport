@@ -4,6 +4,7 @@ namespace App;
 
 use App\Traits\FetchesTicketsByType;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class Ticket
@@ -12,7 +13,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Ticket extends Model
 {
-    use FetchesTicketsByType;
+    use FetchesTicketsByType, SoftDeletes;
 
     const STATUS_OPEN = 1;
     

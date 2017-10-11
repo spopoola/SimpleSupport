@@ -110,4 +110,17 @@ class TicketsController extends Controller
 
         return $ticketData;
     }
+
+    /**
+     * Delete a Ticket
+     *
+     * @param Ticket $ticket
+     * @return array
+     */
+    public function destroy(Ticket $ticket)
+    {
+        $ticket->delete();
+
+        return ["success" => "Ticket ID " . str_plural($ticket->ticket_number) . " deleted!"];
+    }
 }

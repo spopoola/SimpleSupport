@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import * as types from './mutation-types'
+import confirmDelete from '../../../core/confirm_delete'
 
 export const fetchTickets = ({ commit }, type) => {
     return new Promise((resolve, reject) => {
@@ -47,5 +48,17 @@ export const updateTicket = ({ commit }, form) => {
             commit(types.UPDATE_TICKET, data)
             resolve(data)
         }).catch((error) => reject(error))
+    })
+}
+
+export const deleteTicket = ({ commit }, ticket) => {
+    return new Promise((resolve, reject) => {
+        confirmDelete('Ticket ' + ticket.ticket_number).then(() => {
+            Vue.axios.delete(`/api/tickets/${ticket.id}`)
+                .then(() => {
+                    commit(types.DELETE_TICKET, ticket.id)
+                    resolve()
+                }).catch((error) => reject(error))
+        })
     })
 }

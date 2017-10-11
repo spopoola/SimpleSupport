@@ -36,6 +36,7 @@ Route::group(['middleware' => 'jwt.auth'], function () {
     Route::get('tickets', 'Admin\TicketsController@index');
     Route::post('tickets', 'Admin\TicketsController@store');
     Route::patch('tickets/{ticket}', 'Admin\TicketsController@update');
+    Route::delete('tickets/{ticket}', 'Admin\TicketsController@destroy');
 
     Route::get('tickets/type/{type}', 'Admin\TicketsController@getByType');
     Route::get('tickets/type/unassigned', 'Admin\TicketsController@getUnassigned');
