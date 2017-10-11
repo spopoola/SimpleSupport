@@ -2,7 +2,10 @@
     <div class="tile is-ancestor">
         <div class="tile is-parent">
             <div class="tile is-child box">
-                <h4 class="title">Tickets</h4>
+                <div class="table-top">
+                    <h4 class="title">Tickets</h4>
+                    <button class="button is-success" @click.prevent="addTicket">Create Ticket</button>
+                </div>
                 <div class="table-responsive">
                     <table class="table is-bordered is-striped is-narrow">
                         <thead>
@@ -39,5 +42,11 @@
 
     export default {
         props: ['tickets'],
+
+        methods: {
+            addTicket () {
+                Events.$emit('ticket-modal', true)
+            }
+        }
     }
 </script>

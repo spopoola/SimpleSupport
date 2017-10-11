@@ -74,6 +74,9 @@ class TicketsController extends Controller
 
         $ticket = $this->ticket->create(request()->only('subject', 'content'));
 
+        // Update ticket numnber
+        $ticket->update(['ticket_number' => 'ss-'.$ticket->id]);
+
         return [
             "success" => "You have created a new Ticket!",
             "data" => [

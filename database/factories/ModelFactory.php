@@ -12,6 +12,10 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
+
+use App\TicketPriority;
+use App\TicketStatus;
+
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
 
@@ -55,11 +59,11 @@ $factory->define(App\TicketPriority::class, function (Faker\Generator $faker) {
 $factory->define(App\Ticket::class, function (Faker\Generator $faker) {
 
     return [
-        'ticket_number' => uniqid(),
+        'ticket_number' => rand(1, 100),
         'subject' => $faker->text(60),
         'content' => $faker->text,
-        'priority_id' => factory(App\TicketPriority::class)->create()->id,
-        'status_id' => factory(App\TicketStatus::class)->create()->id,
+        'priority_id' => TicketPriority::find(1)->id,
+        'status_id' => TicketStatus::find(1)->id,
     ];
 });
 
