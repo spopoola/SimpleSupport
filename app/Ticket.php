@@ -18,7 +18,6 @@ class Ticket extends Model
     
     protected $attributes = [
         'status_id' => self::STATUS_OPEN,
-        'priority_id' => 1, //temp need to select this on ticket creation
     ];
 
     protected $fillable = ['ticket_number', 'user_id', 'priority_id',

@@ -69,11 +69,12 @@ class TicketsController extends Controller
     public function store()
     {
         $this->validate(request(), [
-            'subject' => 'required|',
+            'subject' => 'required',
             'content' => 'required',
+            'priority_id' => 'required',
         ]);
 
-        $newTicketRequest = request()->only('subject', 'content');
+        $newTicketRequest = request()->only('subject', 'content', 'priority_id');
 
         $newTicket = array_merge(
             $newTicketRequest,
@@ -97,17 +98,16 @@ class TicketsController extends Controller
     public function update(Ticket $ticket)
     {
         $this->validate(request(), [
-            'subject' => 'required|',
+            'subject' => 'required',
             'content' => 'required',
+            'priority_id' => 'required',
         ]);
 
-        $ticket->update(request()->only('subject', 'content'));
+        $ticket->update(request()->only('subject', 'content', 'priority_id'));
+        
+        $ticketData = fractal($ticket, new TicketTransformer)->toArray();
+        $ticketData['success'] = "You have updated ticket {$ticket->ticket_number}";
 
-        return [
-            "success" => "You have updated ticket {$ticket->ticket_number}",
-            "data" => [
-                "ticket" => $ticket,
-            ]
-        ];
+        return $ticketData;
     }
 }

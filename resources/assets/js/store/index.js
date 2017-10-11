@@ -7,6 +7,7 @@ import app from './modules/app'
 import menu from './modules/menu'
 import users from './modules/users'
 import tickets from './modules/tickets'
+import ticket_priorities from './modules/tickets/priorities'
 
 Vue.use(Vuex)
 
@@ -19,6 +20,7 @@ const store = new Vuex.Store({
         menu,
         users,
         tickets,
+        ticket_priorities,
     }
 })
 

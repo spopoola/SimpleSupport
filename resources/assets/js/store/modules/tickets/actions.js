@@ -44,7 +44,7 @@ export const createTicket = ({ commit }, form) => {
 export const updateTicket = ({ commit }, form) => {
     return new Promise((resolve, reject) => {
         form.patch(`/api/tickets/${form.id}`).then(({data}) => {
-            commit(types.UPDATE_TICKET, data.ticket)
+            commit(types.UPDATE_TICKET, data)
             resolve(data)
         }).catch((error) => reject(error))
     })
