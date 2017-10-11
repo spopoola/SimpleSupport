@@ -9,16 +9,16 @@
                 <div class="table-responsive">
                     <table class="table is-bordered is-striped is-narrow">
                         <thead>
-                        <tr>
-                            <th>Subject</th>
-                            <th>Ticket ID</th>
-                            <th>Agent</th>
-                            <th>Status</th>
-                            <th>Priority</th>
-                            <th></th>
-                            <th></th>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Ticket ID</th>
+                                <th>Agent</th>
+                                <th>Status</th>
+                                <th>Priority</th>
+                                <th></th>
+                                <th></th>
 
-                        </tr>
+                            </tr>
                         </thead>
 
                         <tbody v-if="tickets.length">
@@ -26,9 +26,9 @@
                         </tbody>
 
                         <tbody v-else>
-                        <tr>
-                            <td colspan="4">There are no tickets created.</td>
-                        </tr>
+                            <tr>
+                                <td colspan="7">There are no tickets created.</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

@@ -35,22 +35,13 @@ export const fetchTicket = ({ commit }, id) => {
 export const createTicket = ({ commit }, form) => {
     return new Promise((resolve, reject) => {
         form.post('/api/tickets').then(({data}) => {
-            commit(types.ADD_TICKET, data.ticket)
+            commit(types.ADD_TICKET, data)
             resolve(data)
         }).catch((error) => reject(error))
     })
 }
 
 export const updateTicket = ({ commit }, form) => {
-    return new Promise((resolve, reject) => {
-        form.patch(`/api/tickets/${form.id}`).then(({data}) => {
-            commit(types.UPDATE_TICKET, data.ticket)
-            resolve(data)
-        }).catch((error) => reject(error))
-    })
-}
-
-export const storeTicket = ({ commit }, form) => {
     return new Promise((resolve, reject) => {
         form.patch(`/api/tickets/${form.id}`).then(({data}) => {
             commit(types.UPDATE_TICKET, data.ticket)

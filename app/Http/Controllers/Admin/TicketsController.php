@@ -82,12 +82,10 @@ class TicketsController extends Controller
 
         $ticket = $this->ticket->create($newTicket);
 
-        return [
-            "success" => "You have created a new Ticket!",
-            "data" => [
-                "ticket" => $ticket,
-            ]
-        ];
+        $ticketData = fractal($ticket, new TicketTransformer)->toArray();
+        $ticketData['success'] = "You have created a new Ticket!";
+
+        return $ticketData;
     }
 
     /**
