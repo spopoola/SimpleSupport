@@ -33,3 +33,11 @@ html {
   z-index: 2048;
   pointer-events: none;
 }
+
+.table-top {
+  display: flex;
+  h4 {
+    flex: 1 50%;
+  }
+
+}
