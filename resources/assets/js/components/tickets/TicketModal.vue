@@ -81,8 +81,6 @@
             ...mapActions({
                 createTicket: 'tickets/createTicket',
                 updateTicket: 'tickets/updateTicket',
-                storeTicket: 'tickets/storeTicket',
-
             }),
 
             storeTicket () {

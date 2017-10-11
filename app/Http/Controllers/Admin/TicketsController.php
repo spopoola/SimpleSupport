@@ -76,13 +76,11 @@ class TicketsController extends Controller
 
         // Update ticket numnber
         $ticket->update(['ticket_number' => 'ss-'.$ticket->id]);
+        
+        $ticketData = fractal($ticket, new TicketTransformer)->toArray();
+        $ticketData['success'] = "You have created a new Ticket!";
 
-        return [
-            "success" => "You have created a new Ticket!",
-            "data" => [
-                "ticket" => $ticket,
-            ]
-        ];
+        return $ticketData;
     }
 
     /**
