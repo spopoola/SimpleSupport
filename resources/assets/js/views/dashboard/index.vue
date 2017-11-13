@@ -42,28 +42,33 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
+import { TicketsList, TicketModal } from "../../components/tickets";
 
-  import { mapActions, mapGetters } from 'vuex'
-  import { TicketsList, TicketModal } from '../../components/tickets'
-
-  export default {
-    mounted () {
-    	this.fetchTickets()
-        this.fetchTicketStats()
-    },
-
-    computed: {
-      ...mapGetters({
-          tickets: 'tickets/tickets',
-          ticketStats: 'tickets/ticketStats',
-      })
-    },
-
-    methods: {
-      ...mapActions({
-    	  fetchTickets: 'tickets/fetchTickets',
-          fetchTicketStats: 'tickets/fetchTicketStats',
-      }),
+export default {
+  watch: {
+    tickets() {
+       this.fetchTicketStats();
     }
+  },
+
+  mounted() {
+    this.fetchTickets();
+    this.fetchTicketStats();
+  },
+
+  computed: {
+    ...mapGetters({
+      tickets: "tickets/tickets",
+      ticketStats: "tickets/ticketStats"
+    })
+  },
+
+  methods: {
+    ...mapActions({
+      fetchTickets: "tickets/fetchTickets",
+      fetchTicketStats: "tickets/fetchTicketStats"
+    })
   }
+};
 </script>
